@@ -23,5 +23,15 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+
+lspconfig.tsserver.setup{
+  settings = {
+    implicitProjectConfiguration = { 
+      checkJs = true
+    },
+  }
+}
+
 -- 
 -- lspconfig.pyright.setup { blabla}
+
