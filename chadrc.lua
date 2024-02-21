@@ -10,6 +10,20 @@ M.ui = {
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+
+  -- add codeium to statusline
+  statusline = {
+    overriden_modules = function(modules)
+      table.insert(
+        modules,
+        7,
+        (function()
+         local status = vim.api.nvim_call_function("codeium#GetStatusString", {})
+         return "%#Directory#" .. "󰁨 " .. status .. " "
+        end)()
+      )
+    end,
+  },
 }
 
 M.plugins = "custom.plugins"
