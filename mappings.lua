@@ -11,11 +11,21 @@ M.general = {
         require("conform").format()
       end,
       "formatting",
-    }
-
+    },
   },
   v = {
-    [">"] = { ">gv", "indent"},
+    [">"] = { ">gv", "indent" },
+  },
+  i = {
+    -- codeium insert suggestion
+    ["<C-Y>"] = {
+      vim.fn["codeium#Accept"],
+      "insert suggestion",
+      opts = {
+        expr = true,
+        silent = true,
+      },
+    },
   },
 }
 

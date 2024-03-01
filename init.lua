@@ -20,4 +20,4 @@ if vim.g.neovide then
     vim.g.neovide_transparency = 0.9
 end
 
-vim.g.codeium_no_map_tab = true -- disable codeium tab autocompletion
+vim.g.codeium_no_map_tab = 1 -- disable tab in codeium

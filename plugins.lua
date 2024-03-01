@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -16,7 +16,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -49,13 +49,13 @@ local plugins = {
 
   -- My personal plugins
   {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter'
+    "Exafunction/codeium.vim",
+    event = "BufEnter",
   },
 
   {
     "ThePrimeagen/vim-be-good",
-    lazy = false
+    lazy = false,
   },
 
   -- To make a plugin not be loaded

@@ -18,10 +18,12 @@ M.ui = {
         modules,
         7,
         (function()
-         local status = vim.api.nvim_call_function("codeium#GetStatusString", {})
-         return "%#Directory#" .. "󰁨 " .. status .. " "
-        end)()
-      )
+           local status = vim.fn["codeium#GetStatusString"]()
+           if status == "" then
+             return ""
+           end
+          return "%#Directory#" .. "󰁨 " .. status .. " "
+        end)())
     end,
   },
 }
