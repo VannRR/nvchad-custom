@@ -8,6 +8,8 @@ local servers = {
   "bashls",
   "cssls",
   "eslint",
+  "golangci_lint_ls",
+  "gopls",
   "html",
   "lua_ls",
   "stylelint_lsp",
@@ -23,10 +25,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-
 lspconfig.tsserver.setup{
   settings = {
-    implicitProjectConfiguration = { 
+    implicitProjectConfiguration = {
       checkJs = true
     },
   }

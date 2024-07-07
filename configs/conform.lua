@@ -2,7 +2,9 @@ local options = {
 	lsp_fallback = true,
 
 	formatters_by_ft = {
-		lua = { "stylua" },
+		go = { "gofmt" },
+
+    lua = { "stylua" },
 
 		rust = { "rustfmt" },
 

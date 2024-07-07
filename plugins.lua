@@ -48,10 +48,11 @@ local plugins = {
   },
 
   -- My personal plugins
-  {
-    "Exafunction/codeium.vim",
-    event = "BufEnter",
-  },
+  
+  -- {
+  --   "Exafunction/codeium.vim",
+  --   event = "BufEnter",
+  -- },
 
   {
     "ThePrimeagen/vim-be-good",
