@@ -6,9 +6,11 @@
 --   command = "tabdo wincmd =",
 -- })
 
-vim.opt.colorcolumn="80" -- vertical ruler
+vim.opt.colorcolumn = "80" -- vertical ruler
 
-vim.opt.relativenumber=true -- relative to current line
+vim.opt.relativenumber = true -- relative to current line
+
+vim.opt.tabstop = 4 -- tab size
 
 vim.opt.spelllang = 'en_us' -- spell checking language
 vim.opt.spell = true -- enable spell checking

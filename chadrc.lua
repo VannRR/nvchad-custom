@@ -12,20 +12,20 @@ M.ui = {
   hl_add = highlights.add,
 
   -- add codeium to statusline
-  statusline = {
-    overriden_modules = function(modules)
-      table.insert(
-        modules,
-        7,
-        (function()
-           local status = vim.fn["codeium#GetStatusString"]()
-           if status == "" then
-             return ""
-           end
-          return "%#Directory#" .. "󰁨 " .. status .. " "
-        end)())
-    end,
-  },
+  --statusline = {
+  --  overriden_modules = function(modules)
+  --    table.insert(
+  --      modules,
+  --      7,
+  --      (function()
+  --         local status = vim.fn["codeium#GetStatusString"]()
+  --         if status == "" then
+  --           return ""
+  --         end
+  --        return "%#Directory#" .. "󰁨 " .. status .. " "
+  --      end)())
+  --  end,
+  --},
 }
 
 M.plugins = "custom.plugins"

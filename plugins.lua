@@ -48,7 +48,7 @@ local plugins = {
   },
 
   -- My personal plugins
-  
+
   -- {
   --   "Exafunction/codeium.vim",
   --   event = "BufEnter",
