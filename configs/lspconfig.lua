@@ -17,7 +17,6 @@ local servers = {
   "rust_analyzer",
 }
 
-
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -25,14 +24,21 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.tsserver.setup{
+lspconfig.bashls.setup {
   settings = {
-    implicitProjectConfiguration = {
-      checkJs = true
+    bashIde = {
+      shellcheckArguments = { "-o", "all" },
     },
-  }
+  },
 }
 
--- 
--- lspconfig.pyright.setup { blabla}
+lspconfig.tsserver.setup {
+  settings = {
+    implicitProjectConfiguration = {
+      checkJs = true,
+    },
+  },
+}
 
+--
+-- lspconfig.pyright.setup { blabla}
