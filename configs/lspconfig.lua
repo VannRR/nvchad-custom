@@ -24,14 +24,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.bashls.setup {
-  settings = {
-    bashIde = {
-      shellcheckArguments = { "-o", "all" },
-    },
-  },
-}
-
 lspconfig.tsserver.setup {
   settings = {
     implicitProjectConfiguration = {
