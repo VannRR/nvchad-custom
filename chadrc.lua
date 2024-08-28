@@ -2,35 +2,35 @@
 local M = {}
 
 -- Path to overriding theme and highlights files
-local highlights = require "custom.highlights"
+local highlights = require("custom.highlights")
 
 M.ui = {
-  theme = "onedark",
-  theme_toggle = { "onedark", "one_light" },
+	theme = "onedark",
+	theme_toggle = { "onedark", "one_light" },
 
-  hl_override = highlights.override,
-  hl_add = highlights.add,
+	hl_override = highlights.override,
+	hl_add = highlights.add,
 
-  -- add codeium to statusline
-  --statusline = {
-  --  overriden_modules = function(modules)
-  --    table.insert(
-  --      modules,
-  --      7,
-  --      (function()
-  --         local status = vim.fn["codeium#GetStatusString"]()
-  --         if status == "" then
-  --           return ""
-  --         end
-  --        return "%#Directory#" .. "󰁨 " .. status .. " "
-  --      end)())
-  --  end,
-  --},
+	-- add codeium to statusline
+	--statusline = {
+	--  overriden_modules = function(modules)
+	--    table.insert(
+	--      modules,
+	--      7,
+	--      (function()
+	--         local status = vim.fn["codeium#GetStatusString"]()
+	--         if status == "" then
+	--           return ""
+	--         end
+	--        return "%#Directory#" .. "󰁨 " .. status .. " "
+	--      end)())
+	--  end,
+	--},
 }
 
 M.plugins = "custom.plugins"
 
 -- check core.mappings for table structure
-M.mappings = require "custom.mappings"
+M.mappings = require("custom.mappings")
 
 return M

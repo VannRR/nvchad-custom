@@ -2,31 +2,31 @@
 local M = {}
 
 M.general = {
-  n = {
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+	n = {
+		[";"] = { ":", "enter command mode", opts = { nowait = true } },
 
-    --  format with conform
-    ["<leader>fm"] = {
-      function()
-        require("conform").format()
-      end,
-      "formatting",
-    },
-  },
-  v = {
-    [">"] = { ">gv", "indent" },
-  },
-  i = {
-    -- codeium insert suggestion
-    ["<C-Y>"] = {
-      vim.fn["codeium#Accept"],
-      "insert suggestion",
-      opts = {
-        expr = true,
-        silent = true,
-      },
-    },
-  },
+		--  format with conform
+		["<leader>fm"] = {
+			function()
+				require("conform").format()
+			end,
+			"formatting",
+		},
+	},
+	v = {
+		[">"] = { ">gv", "indent" },
+	},
+	i = {
+		-- codeium insert suggestion
+		["<C-Y>"] = {
+			vim.fn["codeium#Accept"],
+			"insert suggestion",
+			opts = {
+				expr = true,
+				silent = true,
+			},
+		},
+	},
 }
 
 -- more keybinds!
