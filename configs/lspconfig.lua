@@ -13,6 +13,7 @@ local servers = {
 	"html",
 	"lua_ls",
 	"stylelint_lsp",
+    "typos_lsp",
 	"vtsls",
 	"rust_analyzer",
 }

@@ -34,6 +34,7 @@ M.mason = {
 		"lua-language-server",
 		"stylelint-lsp",
 		"typescript-language-server",
+        "typos-lsp",
 	},
 	PATH = "append",
 }
